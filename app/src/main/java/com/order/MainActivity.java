@@ -1,7 +1,8 @@
-package com.order.bo;
+package com.order;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.order.bo.R;
 
 public class MainActivity extends AppCompatActivity {
 

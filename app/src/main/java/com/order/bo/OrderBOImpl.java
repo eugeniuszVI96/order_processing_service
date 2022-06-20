@@ -1,5 +1,6 @@
 package com.order.bo;
 
+import com.order.OrderBO;
 import com.order.bo.exception.BOException;
 import com.order.dao.OrderDAO;
 import com.order.dto.Order;

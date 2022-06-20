@@ -32,7 +32,7 @@ public class OrderBOImplTest {
     @Test
     void placeOrder_Should_Create_An_Order() throws SQLException, BOException {
         Order order = new Order();
-        Integer integer = Integer.valueOf(1);
+        Integer integer = 1;
 
         when(dao.create(any(Order.class))).thenReturn(integer);
         boolean result = bo.placeOrder(order);
@@ -54,7 +54,7 @@ public class OrderBOImplTest {
     }
 
     @Test
-    public void placeOrder_Should_Throw_BOException() throws SQLException, BOException {
+    void placeOrder_Should_Throw_BOException() throws SQLException, BOException {
         Order order = new Order();
 
         when(dao.create(any(Order.class))).thenThrow(SQLException.class);
@@ -90,7 +90,7 @@ public class OrderBOImplTest {
     }
 
     @Test
-    public void cancelOrder_Should_Throw_BOException() throws SQLException, BOException {
+    void cancelOrder_Should_Throw_BOException() throws SQLException, BOException {
 
         when(dao.read(anyInt())).thenThrow(SQLException.class);
 
@@ -98,7 +98,7 @@ public class OrderBOImplTest {
     }
 
     @Test
-    public void cancelOrder_Should_Throw_BOException_On_Update() throws SQLException, BOException {
+    void cancelOrder_Should_Throw_BOException_On_Update() throws SQLException, BOException {
         Order order=new Order();
 
         when(dao.read(ORDER_ID)).thenReturn(order);
@@ -108,7 +108,7 @@ public class OrderBOImplTest {
     }
 
     @Test
-    void deleteOrder_Should_Delete_An_Order() throws SQLException, BOException{
+    public void deleteOrder_Should_Delete_An_Order() throws SQLException, BOException{
 
         when(dao.delete(ORDER_ID)).thenReturn(1);
         boolean result = bo.deleteOrder(ORDER_ID);

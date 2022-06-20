@@ -1,4 +1,4 @@
-package com.order.bo;
+package com.order;
 
 import com.order.bo.exception.BOException;
 import com.order.dto.Order;
